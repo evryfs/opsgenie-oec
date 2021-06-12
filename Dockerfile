@@ -1,6 +1,5 @@
 FROM quay.io/evryfs/base-ubuntu:focal-20210416
 LABEL maintainer "fsdevops@evry.com"
-RUN apt-get update && \
-	apt-get --no-install-recommends -y install somepackage && \
-	apt-get -y clean && \
-	rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
+ARG OEC_VERSION=1.1.3
+RUN curl -L https://github.com/opsgenie/oec/releases/download/${OEC_VERSION}/oec-linux-amd64-${OEC_VERSION}.zip -o /tmp/oec.zip && unzip /tmp/oec.zip && rm /tmp/oec.zip
+ENTRYPOINT ["/OpsgenieEdgeConnector"]
