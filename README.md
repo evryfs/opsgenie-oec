@@ -1,5 +1,5 @@
 # docker-image
 
-Info on what
+Packaging of [OpsGenie Edge Connector - OEC](https://github.com/opsgenie/oec).
 
 # badges
