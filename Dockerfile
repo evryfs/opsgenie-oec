@@ -1,4 +1,4 @@
-FROM quay.io/evryfs/base-ubuntu:jammy-20230308
+FROM quay.io/evryfs/base-ubuntu:jammy-20231128
 LABEL maintainer "fsdevops@evry.com"
 ARG OEC_VERSION=1.1.3
 RUN curl -L https://github.com/opsgenie/oec/releases/download/${OEC_VERSION}/oec-linux-amd64-${OEC_VERSION}.zip -o /tmp/oec.zip && unzip /tmp/oec.zip && rm /tmp/oec.zip && \
